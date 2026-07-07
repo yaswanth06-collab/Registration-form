@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 400px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #b02a37;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>User Registration Form</h2>
+
+    <form action="https://example.com/register" method="post">
+
+        <!-- First Name -->
+        <label for="fname">First Name</label>
+        <input
+            type="text"
+            id="fname"
+            name="first_name"
+            value="John"
+            autofocus
+            required
+            minlength="2">
+
+        <!-- Last Name -->
+        <label for="lname">Last Name</label>
+        <input
+            type="text"
+            id="lname"
+            name="last_name"
+            required
+            minlength="2">
+
+        <!-- Email -->
+        <label for="email">Email Address</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="example@email.com"
+            required>
+
+        <!-- Password -->
+        <label for="password">Password</label>
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+            minlength="8"
+            required>
+
+        <div class="buttons">
+            <!-- Default Form Action -->
+            <input type="submit" value="Register">
+
+            <!-- Override Action using formaction -->
+            <input
+                type="submit"
+                value="Register (Backup)"
+                formaction="https://example.com/backup-register">
+
+            <input type="reset" value="Reset">
+        </div>
+
+    </form>
+</div>
+
+</body>
+</html>
